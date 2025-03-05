@@ -28,6 +28,6 @@ mongoose.connect(process.env.DATABASE_URI)
   .then(() => console.log("DB Connected Successfully"))
   .catch((err) => console.log("Error connecting DB", err));
 
-app.listen('10000', () => {
+app.listen(process.env.PORT, () => {
     console.log("Server starting at port 10000")
 })
